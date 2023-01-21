@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Sofia+Sans:wght@800;900&display=swap');
+
+* {
+    font-family: 'Sofia Sans', sans-serif;
+    ;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 0;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: none;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: none;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: none;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+.blog {
+    background-image: url("/images/kurseung2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100vw;
+    animation: shrink 5s infinite alternate;
+    animation-direction: alternate;
+}
+
+@keyframes shrink {
+    0% {
+        background-size: 110% 110%;
+    }
+
+    100% {
+        background-size: 100% 100%;
+    }
+}
+
+.post {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    place-items: center;
+    align-items: center;
+    margin-top: 6rem;
+    overflow: auto;
+    gap: 1rem;
+}
+
+h1 {
+    margin: 0px;
+    text-align: center;
+    padding-top: 7rem;
+    font-size: 12vh !important;
+    color: white;
+    text-shadow: 2px 3px 4px #00000087;
+}
+
+@media only screen and (max-width:768px) {
+    .post {
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+}
+
+@media only screen and (max-width:425px) {
+    .post {
+        display: grid;
+        grid-template-columns: auto;
+    }
+}
